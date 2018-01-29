@@ -23,13 +23,13 @@ WIN_COMBINATIONS = [
    end
    false
  end
- 
+
  def full?(board)
    board.none? do|index|
      index == " " || index == nil
    end
  end
- 
+
  def draw?(board)
    if full?(board) && !won?(board)
      true
@@ -37,13 +37,13 @@ WIN_COMBINATIONS = [
      false
    end
  end
- 
+
  def over?(board)
    if won?(board) || draw?(board) || full?(board)
      true
    end
  end
- 
+
  def winner(board)
    if !won?(board)
      return nil
